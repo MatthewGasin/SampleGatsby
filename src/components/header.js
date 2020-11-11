@@ -1,42 +1,49 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import headerStyles from "../styles/header.module.css"
+import {useStaticQuery, graphql} from "gatsby"
+import Img from "gatsby-image";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = () => {
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+    const data = useStaticQuery(graphql`
+    query {
+        allContentfulAsset(filter: {contentful_id: {eq: "1ab2Baqeq15oNLTRgCd8GY"}}) {
+            nodes {
+                fluid {
+                ...GatsbyContentfulFluid
+                }
+            }
+        }
+        allContentfulHeaderColor {
+            nodes {
+                color
+            }
+        }
+    }`);
 
-Header.defaultProps = {
-  siteTitle: ``,
+    // Icon Data is a quick retrieval of the header rocket image asset
+    const iconData = data.allContentfulAsset.nodes[0];
+    const headerData = data.allContentfulHeaderColor.nodes;
+
+    return (
+    <header className={headerStyles.header}>
+        <div className={headerStyles.imageSeparator}>
+            <div className={[headerStyles.icon, headerStyles.headerEntry].join(" ")}>
+                {iconData && ( <Img fluid={iconData.fluid}/> )}
+            </div>
+            <div className={headerStyles.headerEntry}>
+                <ul className={headerStyles.colorsList}>
+                {headerData.map(node => {
+                    return (
+                        <li className={headerStyles.colorHeader} key={node.color}>
+                            {node.color}
+                        </li>
+                    )
+                })}
+                </ul>
+            </div>
+        </div>
+    </header>)
 }
 
 export default Header

@@ -1,0 +1,15 @@
+/* Horizontal listing and centered cards */
+
+.card-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.card-item {
+    float: left;
+    padding: 20px;
+    color: grey;
+}
+
