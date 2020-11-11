@@ -10,6 +10,10 @@ The head of the website is the index and layout.
 The layout contains the Header and Card List components, which each have their own CSS modules and Contentful GraphQL data queries.
 The Card List contains 3 Card components. 
 
+The CMS has two Content Models, one for the Color Cards and another for the Header Colors.
+The Color Card has its title (which is unique and required), as well as a description and image.
+The Header Color only has a title. 
+
 ### Todo
 * Work on better scalability for various screens and mobile. This would include:
   * Dynamic multicolor background instead of the current static one
