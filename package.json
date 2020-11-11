@@ -31,5 +31,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taranack/SampleGatsby"
   }
 }

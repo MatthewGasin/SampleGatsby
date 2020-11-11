@@ -1,0 +1,90 @@
+/* Boilerplate CSS leftover from the sample Gatsby project */
+/* Decided to keep some of it as it can't hurt */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font: 112.5%/1.45em serif, sans-serif;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: hsla(0, 0%, 0%, 0.8);
+    font-family: proxima-nova, Arial, sans-serif;
+    font-weight: normal;
+    word-wrap: break-word;
+    font-kerning: normal;
+    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt";
+    height: 100%;
+    /* Easy solution to the two color background */
+    /* TODO: fix scaling issue, does not work as intended for different screen sizes  */
+    background: linear-gradient(to bottom, #929292 65%, #f8f8f8 65%);
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*:before {
+    box-sizing: inherit;
+}
+
+*:after {
+    box-sizing: inherit;
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+/* Title text */
+
+h1 {
+    color: white;
+    font-family: proxima-nova, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 3rem;
+    text-align: center;
+    word-spacing: 10px;
+    line-height: 2;
+}
+
+/* Center text */
+
+p {
+    color: white;
+    font-family: proxima-nova, Arial, sans-serif;
+    text-align: center;
+    padding: 0 0 2rem 0;
+    margin: 0 0 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Main button */
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3.5rem;
+    display: block;
+    background-color: #878787;
+    color: white;
+    border: none;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 12px;
+}

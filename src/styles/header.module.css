@@ -1,0 +1,39 @@
+.header {
+    background: white;
+    margin-bottom: 1rem;
+}
+
+.image-separator {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: .25rem 0;
+    display: flex
+
+}
+
+.icon {
+    max-width: 50px;
+}
+
+.header-entry {
+    flex: 1;
+}
+
+
+.colors-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.color-header {
+    float: right;
+    padding: 1rem 1.5rem;
+    display: block;
+    color: grey;
+    text-align: right;
+    font-family: proxima-nova, Arial, sans-serif;
+    font-size: 0.75rem;
+    text-rendering: optimizeLegibility;
+}
