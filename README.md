@@ -1,5 +1,5 @@
 # Webstacks Sample Project
-This is a sample website built on **React**, **Gatsby** and **Contentful**.
+This is a sample website built on **React**, **Gatsby** and **Contentful**. The website is hosted on https://vigorous-morse-f378fc.netlify.app/
 
 ### Build instructions
 After cloning, install the necesary packages with `npm install`. With this completed, run
@@ -18,3 +18,4 @@ The Card List contains 3 Card components.
   * Cards either in a row of three or column of three, skipping over 2 rows and columns
 * Create an image component instead of using `gatsby-image` everytime an image needs to be placed
 * Combine the two Contentful GraphQL queries into one at the top-level of the application, and pass down the data
+
