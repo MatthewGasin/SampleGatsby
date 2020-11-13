@@ -34,6 +34,11 @@
     color: grey;
     text-align: right;
     font-family: proxima-nova, Arial, sans-serif;
+    transition: font-size 300ms linear;
     font-size: 0.75rem;
     text-rendering: optimizeLegibility;
+}
+
+.color-header:hover {
+    font-size: .8rem;
 }
